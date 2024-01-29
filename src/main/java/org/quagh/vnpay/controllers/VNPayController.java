@@ -22,7 +22,7 @@ public class VNPayController {
                               @RequestParam("orderInfo") String orderInfo,
                               HttpServletRequest request){
         String baseUrl = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort();
-        return vnPayService.createOrder(orderTotal, orderInfo, baseUrl);
+        return vnPayService.createOrder(orderTotal, orderInfo, baseUrl,request);
     }
 
     @GetMapping("/vnpay-payment")
